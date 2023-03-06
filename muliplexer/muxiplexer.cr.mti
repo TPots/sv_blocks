@@ -1,0 +1,26 @@
+/home/trevorm/Projects/systemVerilog/sv_blocks/muliplexer/encoder.sv {1 {vlog -work work -sv -stats=none /home/trevorm/Projects/systemVerilog/sv_blocks/muliplexer/encoder.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module encoder
+-- Compiling module encoder_tb
+-- Importing package std_types
+
+Top level modules:
+	encoder_tb
+
+} {} {}} /home/trevorm/Projects/systemVerilog/sv_blocks/std_types.sv {1 {vlog -work work -sv -stats=none /home/trevorm/Projects/systemVerilog/sv_blocks/std_types.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package std_types
+
+Top level modules:
+	--none--
+
+} {} {}} /home/trevorm/Projects/systemVerilog/sv_blocks/muliplexer/binmux.sv {1 {vlog -work work -sv -stats=none /home/trevorm/Projects/systemVerilog/sv_blocks/muliplexer/binmux.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module binmux
+-- Compiling module binmux_tb
+-- Importing package std_types
+
+Top level modules:
+	binmux_tb
+
+} {} {}}
