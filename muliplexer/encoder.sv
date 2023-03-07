@@ -1,3 +1,15 @@
+/*
+////
+== encoder
+
+==== Parameters
+
+==== Inputs
+
+==== Outputs
+////
+*/
+
 module encoder
 #(parameter DATA_WIDTH, localparam MAX_COUNT_BITS = $clog2(DATA_WIDTH) + 1)
 (

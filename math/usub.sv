@@ -1,3 +1,96 @@
+/*
+////
+== usub
+
+Takes in two signals (`in0` and `in1`), and signals the differenece of `in0` and `in1` on `out`.
+
+If `out` is unable to encode the difference of `in0` and `in1` and would result in underflow, `out` is pulled low, `sig_ov` is pulled high, and `underflow` carries the magnitude `out` was underflowed by.
+
+=== Parameters
+
+- `DATA_WIDTH`: Input parameter setting the width of the signals `in0`,in1`,out`, and `underflow`. `DATA_WIDTH` has no value by default.
+
+=== Inputs
+
+[cols="25%,75%"]
+|===
+| Name
+| `in0`
+
+| Size
+| `DATA_WIDTH` as `[DATA_WIDTH - 1 : 0]`
+
+| Encoding
+| Unsigned Integer
+
+| Description
+| A signal carrying the first term of the difference.
+|===
+
+[cols="25%,75%"]
+|===
+| Name
+| `in0`
+
+| Size
+| `DATA_WIDTH` as `[DATA_WIDTH - 1 : 0]`
+
+| Encoding
+| Unsigned Integer
+
+| Description
+| A signal carrying the second term of the difference.
+|===
+
+=== Outputs
+
+[cols="25%,75%"]
+|===
+| Name
+| `out`
+
+| Size
+| `DATA_WIDTH` as `[DATA_WIDTH - 1 : 0]`
+
+| Encoding
+| Unsigned integer
+
+| Description
+| A signal carrying the difference of `in0` and `in1`. If `out` cannot encode the difference of `in0` and `in1` it is pulled low.
+|===
+
+[cols="25%,75%"]
+|===
+| Name
+| `underflow`
+
+| Size
+| `DATA_WIDTH` as `[DATA_WIDTH - 1 : 0]`
+
+| Encoding
+| Unsigned Integer
+
+| Description
+| A signal carrying the magnitude that `out` would underflow if the differnece of `in0` and `in1` cannot be encoded by `out`. If `out` is capable of encoding the difference of `in0` and `in1`, `underflow' is pulled low. 
+|===
+
+[cols="25%,75%"]
+|===
+| Name
+| `sig_uv`
+
+| Size
+| `1`
+
+| Encoding
+| Boolean
+
+| Description
+| A signal carrying the overflow condition of `out`. `sig_uv` is pulled high if `out` is overflowed by the sum of `in0` and `in1` and otherwise is pulled low.
+|===
+////
+*/
+
 module usub
 #(parameter DATA_WIDTH)
 (
